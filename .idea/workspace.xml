@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="" />
+    <list default="true" id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/range/properties/MeiliStartupProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/spring/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/range/MeiliStartupInitializingBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/range/MeiliStartupInitializingBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/range/autoconfig/MeiliStartupAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/range/autoconfig/MeiliStartupAutoConfiguration.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +102,8 @@
       <workItem from="1769371757097" duration="61000" />
       <workItem from="1769371875624" duration="144000" />
       <workItem from="1769372103280" duration="311000" />
+      <workItem from="1769372644688" duration="798000" />
+      <workItem from="1769424240853" duration="2166000" />
     </task>
     <servers />
   </component>

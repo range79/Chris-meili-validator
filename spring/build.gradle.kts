@@ -4,14 +4,17 @@ plugins {
 
 group = "com.range"
 
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("org.springframework:spring-context:7.0.3")
     implementation(project(":core"))
-    implementation("org.springframework:spring-beans:7.0.3")
+    implementation("org.springframework:spring-context:7.0.3")
+    implementation("org.springframework.boot:spring-boot-autoconfigure:4.0.0")
+    compileOnly("org.springframework.boot:spring-boot-configuration-processor:4.0.0")
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:4.0.0")
     testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
 }
 

@@ -1,4 +1,4 @@
-package com.range.spring;
+package com.range;
 
 import com.range.validator.MeiliStartupValidator;
 import org.springframework.beans.factory.InitializingBean;
