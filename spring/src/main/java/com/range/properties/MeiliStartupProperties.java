@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class MeiliStartupProperties {
 
 
-    private String url = "http://localhost:7070";
+    private String url = "http://localhost:7700";
 
     /**
      * Max wait time (seconds)
