@@ -99,7 +99,7 @@ When you use the Spring module, `core` is included automatically.
 Set Meili search URL in your application configuration:
 
 ```properties
-meili.datasource.url=http://localhost:7700
+meili.startup.url=<Your-Meili-app-url> like(http://localhost:7070)(default url is https://localhost:7070)
 ```
 
 Optional settings:
@@ -107,6 +107,8 @@ Optional settings:
 ```properties
 meili.startup.interval=    # default 1
 meili.startup.timeout=    # second format default is 30
-meili.startup.url=<Your-Meili-app-url> like(http://localhost:7070)
+
+# API key is optional: only fill if your Meili instance was started with a key
+meili.startup.api-key=YOUR_MEILI_API_KEY
 ```
 
