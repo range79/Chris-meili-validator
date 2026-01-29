@@ -99,7 +99,7 @@ When you use the Spring module, `core` is included automatically.
 Set Meili search URL in your application configuration:
 
 ```properties
-meili.startup.url=<Your-Meili-app-url> like(http://localhost:7070)(default url is https://localhost:7070)
+meili.startup.url=<Your-Meili-app-url> like(http://localhost:7700)(default url is https://localhost:7700)
 ```
 
 Optional settings:

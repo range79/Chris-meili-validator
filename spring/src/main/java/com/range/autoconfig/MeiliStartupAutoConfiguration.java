@@ -1,6 +1,5 @@
 package com.range.autoconfig;
 
-import com.range.MeiliStartupInitializingBean;
 import com.range.meili.http.MeiliHttpClient;
 import com.range.meili.validator.MeiliHealthChecker;
 import com.range.meili.validator.MeiliIndexChecker;
@@ -29,19 +28,19 @@ public class MeiliStartupAutoConfiguration {
         MeiliTaskChecker taskChecker = new MeiliTaskChecker(httpClient, properties.getUrl());
         MeiliIndexChecker indexChecker = new MeiliIndexChecker(httpClient, properties.getUrl());
 
-        return new MeiliStartupValidator(
+        MeiliStartupValidator validator = new MeiliStartupValidator(
                 healthChecker,
                 taskChecker,
                 indexChecker,
                 properties.getTimeout(),
                 properties.getInterval()
         );
+
+
+        validator.validate();
+        return validator;
+
     }
 
-    @Bean
-    public MeiliStartupInitializingBean meiliStartupInitializingBean(
-            MeiliStartupValidator validator
-    ) {
-        return new MeiliStartupInitializingBean(validator);
-    }
+
 }
