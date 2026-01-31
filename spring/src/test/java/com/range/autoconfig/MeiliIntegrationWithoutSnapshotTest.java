@@ -33,7 +33,7 @@ class MeiliIntegrationWithoutSnapshotTest {
                     .waitingFor(
                             new MultiEndpointWaitStrategy(
                                     List.of("/health", "/indexes", "/stats")
-                            ).withStartupTimeout(Duration.ofSeconds(60))
+                            ).withStartupTimeout(Duration.ofSeconds(120))
                     );
 
     @DynamicPropertySource
