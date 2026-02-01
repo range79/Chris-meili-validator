@@ -11,10 +11,6 @@ public class MeiliHttpClient {
     private final OkHttpClient client = new OkHttpClient();
     private final String apiKey;
 
-    public MeiliHttpClient() {
-        this.apiKey = null;
-    }
-
     public MeiliHttpClient(String apiKey) {
         this.apiKey = apiKey;
     }
