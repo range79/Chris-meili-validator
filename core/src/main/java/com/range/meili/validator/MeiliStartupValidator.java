@@ -44,10 +44,10 @@ public class MeiliStartupValidator {
 
         while (Instant.now().isBefore(deadline)) {
 
-            if (!healthChecker.isHealthy()) {
-                log(LogMode.WARN, "Health check failed");
-            } else if (!taskChecker.isSnapshotFinished()) {
-                log(LogMode.INFO, "Snapshot import still running");
+            if (!taskChecker.isSnapshotFinished()) {
+                log(LogMode.WARN, "Snapshot import still running");
+            } else if (!healthChecker.isHealthy()) {
+                log(LogMode.INFO, "Health check failed");
             } else if (!indexChecker.isQueryable()) {
                 log(LogMode.INFO, "Indexes are not queryable yet");
             } else {
