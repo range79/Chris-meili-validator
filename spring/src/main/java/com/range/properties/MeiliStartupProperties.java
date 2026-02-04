@@ -39,7 +39,10 @@ public class MeiliStartupProperties {
         this.logMode = logMode;
     }
 
-    private LogMode logMode= LogMode.INFO;
+    private LogMode logMode;
+    public MeiliStartupProperties() {
+        this.logMode = LogMode.INFO;
+    }
 
     public String getUrl() {
         return url;
