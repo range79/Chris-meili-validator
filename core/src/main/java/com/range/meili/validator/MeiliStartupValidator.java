@@ -1,6 +1,7 @@
 package com.range.meili.validator;
 
 import com.range.meili.enums.LogMode;
+import com.range.meili.exception.InvalidMaterKeyException;
 import com.range.meili.exception.MeiliNotStartedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,17 +44,20 @@ public class MeiliStartupValidator {
         Instant deadline = Instant.now().plusSeconds(timeoutSeconds);
 
         while (Instant.now().isBefore(deadline)) {
-
-            if (!healthChecker.isHealthy()) {
-                log(LogMode.INFO, "Health check failed");
-            } else if (!taskChecker.isSnapshotFinished()) {
-            log(LogMode.WARN, "Snapshot import still running");
-            } else if (!indexChecker.isQueryable()) {
-                log(LogMode.INFO, "Indexes are not queryable yet");
-            } else {
-                log(LogMode.INFO, "MeiliSearch is fully ready");
-                return;
-            }
+            try {
+                if (!healthChecker.isHealthy()) {
+                   log(LogMode.INFO, "Health check failed");
+                } else if (!taskChecker.isSnapshotFinished()) {
+                    log(LogMode.WARN, "Snapshot import still running");
+                } else if (!indexChecker.isQueryable()) {
+                    log(LogMode.INFO, "Indexes are not queryable yet");
+                } else {
+                    log(LogMode.INFO, "MeiliSearch is fully ready");
+                    return;
+                }
+            } catch (InvalidMaterKeyException e) {
+                log.error("Master key invalid detected during startup. Aborting!", e);
+                throw e;}
 
             sleep();
         }
