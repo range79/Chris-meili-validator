@@ -1,6 +1,5 @@
 package com.range.properties;
 
-import com.range.meili.enums.LogMode;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "meili.startup")
@@ -31,18 +30,7 @@ public class MeiliStartupProperties {
      */
     private int interval = 1;
 
-    public LogMode getLogMode() {
-        return logMode;
-    }
 
-    public void setLogMode(LogMode logMode) {
-        this.logMode = logMode;
-    }
-
-    private LogMode logMode;
-    public MeiliStartupProperties() {
-        this.logMode = LogMode.INFO;
-    }
 
     public String getUrl() {
         return url;

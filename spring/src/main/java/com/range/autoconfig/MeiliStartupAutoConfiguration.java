@@ -42,8 +42,7 @@ public class MeiliStartupAutoConfiguration {
                 new MeiliTaskChecker(httpClient, properties.getUrl()),
                 new MeiliIndexChecker(httpClient, properties.getUrl()),
                 properties.getTimeout(),
-                properties.getInterval(),
-                properties.getLogMode()
+                properties.getInterval()
         );
     }
 
