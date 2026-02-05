@@ -47,11 +47,11 @@ public class MeiliStartupValidator {
 
             if (!healthChecker.isHealthy()) {
 
-                log.debug("Health check failed");
+                log.info("Health check failed");
 
             } else if (!taskChecker.isSnapshotFinished()) {
 
-                log.warn("Snapshot import still running");
+                log.info("Snapshot import still running");
 
             } else if (!indexChecker.isQueryable()) {
 
