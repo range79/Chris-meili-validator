@@ -120,10 +120,6 @@ meili.startup.timeout=
 # Optional API key.
 # Only set this if your Meilisearch instance was started with an API key.
 meili.startup.api-key=YOUR_MEILI_API_KEY
-
-
-
-
 ```
 
 # what is interval ?
