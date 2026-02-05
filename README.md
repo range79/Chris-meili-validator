@@ -3,7 +3,7 @@ Idea credit: Chris
 
 
 ## Latest version
-[![](https://jitpack.io/v/range79/Chris-meili-validator.svg)](https://jitpack.io/#range79/Chris-meili-validator)
+[![](https://jitpack.io/v/range79/range-meili-validator.svg)](https://jitpack.io/#range79/Chris-meili-validator)
 
 This library solves a simple but annoying problem:
 
@@ -52,7 +52,7 @@ Add JitPack repository:
 ```xml
 <dependency>
   <groupId>com.github.range79</groupId>
-  <artifactId>Chris-meili-validator-core</artifactId>
+  <artifactId>range-meili-validator-core</artifactId>
   <version>VERSION</version>
 </dependency>
 ```
@@ -62,7 +62,7 @@ Add JitPack repository:
 ```xml
 <dependency>
   <groupId>com.github.range79</groupId>
-  <artifactId>Chris-meili-validator-spring</artifactId>
+  <artifactId>range-meili-validator-spring</artifactId>
   <version>VERSION</version>
 </dependency>
 ```
@@ -83,13 +83,13 @@ repositories {
 #### Core only
 
 ```gradle
-implementation("com.github.range79:Chris-meili-validator-core:VERSION")
+implementation("com.github.range79:range-meili-validator-core:VERSION")
 ```
 
 #### Spring Boot integration
 
 ```gradle
-implementation("com.github.range79:Chris-meili-validator-spring:VERSION")
+implementation("com.github.range79:range-meili-validator-spring:VERSION")
 ```
 
 When you use the Spring module, `core` is included automatically.
