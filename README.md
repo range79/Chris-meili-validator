@@ -53,7 +53,7 @@ Add JitPack repository:
 <dependency>
   <groupId>com.github.range79</groupId>
   <artifactId>range-meili-validator-core</artifactId>
-  <version>VERSION</version>
+  <version>1.6.1</version>
 </dependency>
 ```
 
@@ -63,7 +63,7 @@ Add JitPack repository:
 <dependency>
   <groupId>com.github.range79</groupId>
   <artifactId>range-meili-validator-spring</artifactId>
-  <version>VERSION</version>
+  <version>1.6.1</version>
 </dependency>
 ```
 
